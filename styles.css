@@ -278,9 +278,11 @@ footer ul li a:hover {
     }
 
     .team-members {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+        display: block; /* Responsive grid */
     }
-
+    .team-member {
+        margin-bottom: 20px;
+    }       
     #home .cta-button {
         padding: 10px 15px;
         font-size: 14px;
