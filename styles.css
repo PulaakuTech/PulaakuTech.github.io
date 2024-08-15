@@ -265,3 +265,7 @@ footer ul li a:hover {
 .welcome {
     color: #f8f4f4;
 }
+.container {
+    width: 1024px; /* Fixed width */
+    margin: 0 auto;
+}
