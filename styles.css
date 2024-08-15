@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    overflow-x:auto;
 }
 
 h1, h2, h3 {
@@ -266,7 +265,4 @@ footer ul li a:hover {
 .welcome {
     color: #f8f4f4;
 }
-.container {
-    width: 1247px; /* Fixed width */
-    margin: 0 auto;
-}
+
