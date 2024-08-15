@@ -21,14 +21,15 @@ h1, h2, h3 {
 nav {
     background: #333;
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 nav .logo-container {
-    display: inline-block;
+    flex: 1;
 }
 
 nav ul {
@@ -60,17 +61,17 @@ nav ul li a:hover {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 0px 20px;
+    padding: 20px;
 }
 
 #home h1 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 #home .cta-button {
     background: #007bff; /* Blue background */
     color: #fff; /* White text */
-    padding: 5px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 50px; /* Circular edges */
     font-size: 16px;
@@ -130,7 +131,7 @@ nav ul li a:hover {
 
 .team-members {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
     gap: 20px;
 }
 
@@ -185,7 +186,7 @@ nav ul li a:hover {
 }
 
 #contact form {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -258,11 +259,56 @@ footer ul li a {
 footer ul li a:hover {
     text-decoration: underline;
 }
+
 #logo {
-    width:400px;
-    height:auto;
+    width: 200px; /* Adjust logo size for mobile */
+    height: auto;
 }
+
 .welcome {
     color: #f8f4f4;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .team-members {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller grid items for smaller screens */
+    }
+
+    .service-item {
+        padding: 10px;
+    }
+
+    #home .cta-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 150px; /* Further reduce logo size for very small screens */
+    }
+
+    #home {
+        padding: 15px;
+    }
+
+    .service-item h3, .team-member h3 {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    #contact form {
+        padding: 10px;
+    }
+
+    #contact form button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
